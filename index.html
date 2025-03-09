@@ -3,86 +3,1092 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Something2</title>
-
+    <title>Draft4</title>
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="assets/js/intersectionObserver.js" defer></script>
+    <script src="assets/js/footnotes.js" defer></script>
   </head>
   <body>
+    <div id="background_video_container">
+      <video autoplay muted playsinline loop id="background_video"></video>
+    </div>
     <main>
-      <table>
-        <tr>
-          <th colspan="2">Four elements of a myth:</th>
-        </tr>
-        <tr>
-          <td class="first_column">1. The Moon</td>
-          <td class="tablerow_1">
-            The cycle, change, transformation, the first victim.
-          </td>
-          <td class="tablerow_1">
-            "The first place where steam power came into practical use was in
-            replacing one of the most brutal forms of human or animal labour:
-            pumping of water out of mines."
-          </td>
-          <td class="tablerow_1">
-            The Industrial Revolution & the creation of industrial traditions.
-            Abolition of slavery supported economically by the integration of
-            machines into industries.
-          </td>
-        </tr>
-        <tr>
-          <td class="first_column">2. The Beast</td>
-          <td class="tablerow_2">
-            The animal, the wolf, the savage, the monster.
-          </td>
-          <td class="tablerow_2">
-            "[Fear of being replaced. A myth that is technological rather than
-            biological, posthuman. Artificial Intelligence.]"
-          </td>
-          <td class="tablerow_2">
-            A monstruous identity is created for technology. People are
-            generally uncomfortable with the unknown. Machines carrying out more
-            of the cruelty, so that people can afford respect.
-          </td>
-        </tr>
-        <tr>
-          <td class="first_column">3. The Transgression</td>
-          <td class="tablerow_3">The sin, stigma, consequence, perversion.</td>
-          <td class="tablerow_3">
-            "The Greeks regarded the act of discovering fire with very split
-            emotions. On the one hand, fire was for them as for us a great
-            benefit to all humanity. On the other, the carrying down of fire
-            from heaven to earth was a defiance of the Gods of Olympus, and
-            could not but be punished by them as a piece of insolence towards
-            their prerogatives, thus we see the great figure of Prometheus, the
-            fire-bearer, the prototype of the scientist; a hero but a hero
-            damned, chained on the Caucasus with vultures gnawing at his liver."
-          </td>
-          <td class="tablerow_3">
-            Ambition to make our existence easier, to bend "nature", and to tame
-            magic. Know-how vs know-what. These vultures aren’t picking on the
-            liver of Prometheus. This creature isn’t chasing Frankenstein. The
-            punishment is falling on us all, but mostly on the less privileged
-            and most vulnerable.
-          </td>
-        </tr>
-        <tr>
-          <td class="first_column">4. The Other</td>
-          <td class="tablerow_4">
-            The impulse, the uncontrollable, billocation, transmutation,
-            doppelganger.
-          </td>
-          <td class="tablerow_4">?</td>
-          <td class="tablerow_4">
-            But “rule-bending” in this sense is part of human nature, part of
-            how we define consciousness and distinguish human from animal. This
-            ambition to make existence easier is probably the survival tactic
-            that made humanity thrive. By inventing technology to remove
-            obstacles (machine = remedy), we divert our efforts to other areas.
-            Technology as an integral part of being human.
-          </td>
-        </tr>
-      </table>
+      <div class="navegable_element" id="home">
+        <div id="title_container">
+          <h1>The Machine Under the Full Moon</h1>
+          <div id="home_video_container">
+            <video
+              autoplay
+              muted
+              playsinline
+              loop
+              src="assets/images/Loba.mp4"
+            ></video>
+          </div>
+        </div>
+        <div id="table_of_contents">
+          <h2>Table of Contents</h2>
+          <p>Abstract</p>
+          <p>Introduction</p>
+          <p class="toc_chapters">
+            The Self-Fulfilling Prophecy of the Werewolf
+          </p>
+          <p class="toc_chapters">
+            The Machine as a Tool for De-Animalized Smoothness
+          </p>
+          <p class="toc_chapters">The Machine as the Intended User</p>
+          <p class="toc_chapters">The Machine Under the Full Moon</p>
+          <p>Conclusion</p>
+          <p>Bibliography</p>
+        </div>
+      </div>
+      <nav>
+        <div id="seen_sections">
+          <h3 class="navLink">✷</h3>
+        </div>
+        <div id="unseen_sections">
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+          <h3 class="navLink">✷</h3>
+        </div>
+      </nav>
+      <div class="section_end_space"></div>
+      <div class="navegable_element" id="abstract">
+        <h2>Abstract</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>
+          The werewolf: a howl under the full moon, teeth, claws, and fur. A
+          secret uncontrollable rage, a wolf among sheep, a danger to the
+          community. The transformation between a wild animal and its civilized
+          form, dividing human nature into what’s acceptable and what’s not. How
+          do you tame the big bad wolf?
+        </p>
+        <p>
+          The machine: an object. Easy, quick, effective, a perfect result every
+          time. The mark of an advanced civilization, to free mankind of labor.
+          Powerful servants of the masses, controlled by an elite few. Who do
+          these machines actually serve?
+        </p>
+        <p>
+          The mythology of the werewolf and the ideological development of
+          automatization technologies: by analyzing these two starting points as
+          manifestations of the desire to tame human nature, this text will
+          frame machines as anti-animalizing tools. It will investigate the
+          overpowering machinic qualities of civilization, and how they result
+          in societal development being aimed at fellow machines rather than
+          real people. Finally, it will reflect on the inevitability of the
+          animal qualities of human nature, and their ability to adapt to the
+          imposing smoothness of digital technologies. This research will be
+          conducted by analyzing historical documentation and case studies
+          relating to either topic and analyzing the intersections of their
+          respective discourses.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="introduction">
+        <h2>Introduction</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>
+          I often refer to my laptop as “she”. Not only because I think it adds
+          a touch of wit and whimsy to any sentence, but also because it somehow
+          makes sense: she’s a girl, just like me.
+          <span class="intext_footnote">✷</span>
+          She helps me in my work and shows me cool movies, and is by my side
+          when I need her with (almost) no complaints. She has enough data on me
+          to make somewhat accurate predictions on which album I might want to
+          play next, or which website I’ll visit, or even which of my contacts
+          I’ll call at the end of the day. But I know her pretty well too. I can
+          recognize how her movements change when she’s getting tired, I know
+          how to adapt my language when she gives me more advertisements than
+          actual information, and I don’t actually need a website to be
+          well-constructed to find what I’m looking for. I recognize that this
+          fluency goes beyond my own personal device, and that it’s a level of
+          digital literacy I’ve gained from years of experience. Comparing this
+          relationship with the way some members of my family treat and speak
+          about their devices, they seem to experience much more frustration and
+          confusion, and I see they haven’t developed as much sensitivity for
+          understanding their device. But if machines are made to be used by us,
+          if they’re so intelligent and intuitive and practical, why are they
+          indecipherable for some? How has this dynamic of two-way communication
+          become such an important part of working with machines?
+        </p>
+        <p>
+          These questions lead me into investigating the human-machine
+          relationship, the duality between people and their faster and more
+          efficient counterparts. In the context of work and production,
+          machines seem to be an embodiment of the better parts of human nature:
+          a stoic entity that tirelessly does whatever it’s told, instead of a
+          needy and less engineerable employee. In a culture that deems
+          production as a necessity to participate in society, the machine has a
+          more secure place within our civilization than the human. But how
+          civilized can a system be when it serves primarily machines rather
+          than people?
+        </p>
+        <p>
+          At the same time I started thinking about a lecture I attended about
+          werewolves, by designer and theorist Lluís Sallés.
+          <span class="intext_footnote">✷</span>
+          In it, he outlined the development of the werewolf myth and how it
+          represents how we might deal with “otherness”. For not fitting the
+          pattern of what we consider civilized, we might conceptualize the
+          other as a monster. As people, we might even conceptualize our own
+          “unproductive” characteristics as monstrous. Drawing parallels between
+          the dualities of man-wolf and man-machine, where an unpredictable side
+          seems to “drag down” a comparatively more functional side, I started
+          wondering how researching the myth of the werewolf might answer my
+          questions about machines.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="partI">
+        <div class="background_image_section" id="WoL">
+          <div style="height: 50vh"></div>
+          <h2>The Self-Fulfilling Prophecy of the Werewolf</h2>
+          <p class="quote">
+            “His vesture separates in shaggy hair,<br />
+            his arms are changed to legs; and as a wolf<br />
+            he has the same grey locks, the same hard face,<br />
+            the same bright eyes, the same ferocious look.”
+            <span class="intext_footnote">✷</span>
+          </p>
+        </div>
+        <p>
+          <span class="intext_footnote">✷</span><br />
+          When I mention werewolves, you probably imagine a scene very similar
+          to this description. Although it was written two thousand and
+          seventeen years ago,
+          <span class="intext_footnote">✷</span>
+          In <span class="body_italics">Metamorphoses</span>, Ovid’s epic on
+          classic Greco-Roman mythology, there is one of the first mentions of a
+          man-wolf shapeshifter in human history: the myth of Lykaon. The story
+          goes that Lykaon, the tyrant ruler of the land of Arcadia, decided to
+          test the Olympian gods by trying to feed Zeus human meat.
+          <span class="intext_footnote">✷</span>
+          He killed his own son and cooked him, but Zeus caught on to the trick.
+          Furious, he cursed Lykaon by turning him into a wolf with an
+          insatiable thirst for human blood.
+        </p>
+        <p>
+          Cleric / Occult researcher
+          <span class="intext_footnote">✷</span>
+          Montague Summers defines a werewolf as
+          <span class="body_italics"
+            >“a human being, man, woman or child (more often the first), who
+            either voluntarily or involuntarily changes or is metamorphosed into
+            the apparent shape of a wolf, and who is then possessed of all the
+            characteristics, the foul appetites, ferocity, cunning, the brute
+            strength, and swiftness of that animal.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          Nowadays we might see the werewolf as a made-up creature from
+          blurry-rooted tales that has since found a home in Hollywood and
+          fantasy. However, throughout centuries there have been documented
+          real-life werewolves, also known as lycanthropes.
+        </p>
+        <p>
+          The term lycanthropy (as you might’ve guessed, originating from
+          Lykaon) refers to the psychological and/or supernatural condition of
+          being able to transform into a wolf.
+          <span class="intext_footnote">✷</span>
+          Cases of lycanthropy span over centuries but peaked at the same time
+          as witch-hunting in Europe. We now treat it as a psychological
+          disorder, where the afflicted person genuinely believes they possess
+          the physical capabilities of or can transform into a wolf. Cases of
+          lycanthropy usually include serial murder and cannibalism; the most
+          recent instance was reported in 2019.
+          <span class="intext_footnote">✷</span>
+        </p>
+        <p>
+          One of the most famous and horrifying trials of a lycanthrope was of
+          Peter Stubbe/Stumpp,
+          <span class="intext_footnote">✷</span>
+          also known as the werewolf of Bedburg.
+          <span class="intext_footnote">✷</span>
+          He was a wealthy farmer and father of two from a rural community in
+          sixteenth century Germany, who confessed to having made a deal with
+          the devil for a belt which granted him the power to transform into
+          <span class="body_italics"
+            >“a greedy, devouring wolf, strong and mighty, with eyes great and
+            large… a mouth great and wide, with most sharp and cruel teeth, a
+            huge body and mighty paws.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          Allegedly, Stubbe killed and ate two pregnant women and fourteen
+          children, one of which his own son. He was also accused of rape and
+          incest of multiple people including his daughter, as well as
+          bestiality and devouring many animals. Once caught in 1589, he was
+          punished by being horrendously tortured, beheaded, and burned at the
+          stake along with his mistress and his daughter. Warding off similar
+          behaviour, local authorities erected a pole with the torture wheel
+          used in the trial, topped with a figure of a wolf and Stubbe’s head.
+          The following image documents his trial procedure.
+        </p>
+        <p><span class="intext_footnote">✷</span></p>
+        <div class="background_image_section" id="Stumpp"></div>
+        <p>
+          Before the development of psychiatry and a somewhat general disbelief
+          in the supernatural, communities in Western Europe tended to look to
+          religion and spirituality to explain what might bring someone to such
+          gruesome actions. To give some context of the religious ideology at
+          the time, in order to absolve someone of their sins, a priest had to
+          decide if the sinful action meant that the offender had placed any
+          other powers at the same height (or above) the powers of God.
+          <span class="intext_footnote">✷</span>
+          This divisive and combative duality between an absolute good and an
+          absolute evil is known as Manichaeism. Through this ideology, a
+          culture of “you’re either with me or against me” emerged, by which
+          violence against any otherness was justified. This dynamic only
+          strengthened as different sects of Christianity spread among
+          populations of Western Europe. This “threatened” the Catholic Church
+          and lead them to deem these sects as Satanic, accusing them of
+          spreading false and dangerous morals.
+        </p>
+        <p>
+          At the same time, it’s important to understand that in Western Europe
+          the animal that posed the greatest threat to mankind was the wolf.
+          <span class="intext_footnote">✷</span>
+          Nowadays, after centuries of developing urban landscapes which attempt
+          to keep wilderness at bay, we cannot comprehend the fear that the wolf
+          instilled in communities at the time. Inhabiting the remote and
+          untamed depths of the dark forests surrounding human settlements,
+          regardless of the continuous human efforts to hunt and kill it, the
+          wolf persisted for centuries, making it the perfect form for Western
+          European fears to shapeshift into.
+        </p>
+        <p>
+          Soon enough, the story of the werewolf wasn’t necessarily about serial
+          murders anymore. By the 16th century, following Catholic values at a
+          time of religious turmoil in Europe, the werewolf became more of a
+          cautionary tale about the dangers of not repressing the “wild”,
+          separating human nature into two sides: civilized versus uncivilized.
+          <span class="intext_footnote">✷</span>
+          The morale of this story was that it’s dangerous not to repress our
+          supposedly untame characteristics, demonizing those who fail to do so.
+        </p>
+        <p>
+          As weary as I am of quoting Freud, he wrote about this same dynamic
+          from a sociologist perspective in arguing that to be civilized means
+          to repress yourself to some extent:
+          <span class="body_italics"
+            >“Communal life becomes possible only when a majority comes together
+            that is stronger than any individual and presents a united front
+            against every individual. The power of the community then pits
+            itself, in the name of ‘right’, against the power of the individual,
+            which is condemned as ‘brute force’.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          In a utilitarian and egalitarian society, where all individuals are
+          equal and strive for the good of the group, the will of the majority
+          wins over the will of a few. Here, the idea of Manichaeism returns,
+          where there is one motion that represents a net positive for the
+          community and another which represents a net negative.
+        </p>
+        <p>
+          In <span class="body_italics">Spirit and Teeth</span>, by another
+          author I’m weary of quoting, Nick Land explains this concept by
+          pointing out how in the right hands, fire is
+          <span class="body_italics"
+            >“the hearth, the protective and nutrifying glow,”</span
+          >
+          an analogy for ingenuity and progress, but when handled by the other
+          side, it is a
+          <span class="body_italics"
+            >“dissolvant blaze which spreads uncontrollably, (…) the fire of
+            waste, dissipation, dehumanization.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          We don’t want to entrust agency to the members of civilization we deem
+          as uncivilized, because their very nature suggests this would destroy
+          the structures we call progress. Therefore, it’s safer to outcast
+          these outsiders, excluding them from the past, future, and present of
+          the societies they inhabit.
+        </p>
+        <p class="quote">
+          “To be a werewolf is to be inferior by the most basic criteria of
+          civilization. Not only is the discipline of political responsibility
+          alien to them, so is the entire history of work in which such
+          discipline is embedded. (…) The accursed race, living like beasts,
+          whose veins are inflamed by a cosmic menstruation, have never entered
+          into the great project of civilization, which begins with the use of
+          fire to keep the wild animals at bay.”
+          <span class="intext_footnote">✷</span>
+        </p>
+        <p>
+          This interpretation of the werewolf creates a cycle, generating a
+          self-sustaining system of separation between the werewolf and
+          civilization:
+        </p>
+        <p>
+          Inability to repress wilderness is demonized.<br />Repression is a
+          characteristic of civilization.<br />Wilderness is seen as
+          destructive.<br />Wilderness is excluded from society.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="partII">
+        <h2>The Machine as a Tool for De-Animalized Smoothness</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>
+          Are you still thinking about Peter Stubbe from the last chapter? Part
+          of me wants to defend the wilderness of the werewolf for being an
+          outcast of society, but this feeling starts to shrivels up when I
+          think of him. Even understanding that it’s a true story, I tend to
+          read it as fiction for how it reminds me of the killer psychopath
+          trope from the horror genre: the unpredictable violent criminal
+          possessed by a demon or a horrible condition, imprisoned to solitary
+          confinement inside a straightjacket. Of course we want to keep this
+          dangerous type of otherness away. It’s like finding some really old
+          yoghurt in the back of your fridge: an instinctive feeling of disgust
+          and abject takes over, making you forget about recycling the packaging
+          as you deal with it under five layers of gloves. You can’t even stand
+          to look at it.
+        </p>
+        <p>
+          How is it possible that the human species, who evolved into developing
+          altruism, empathy, and compassion, who repeatedly demonstrates a
+          calling to create art and science and philosophy, is also capable of
+          murder, of genocide? This text will not attempt to answer this age-old
+          question. It will, however, point out that as people we’ve always
+          struggled to cope with our own duality.
+        </p>
+        <p>
+          When we’re confronted with hideousness within ourselves, with
+          something we’re not quite able to accept, a similar feeling to that of
+          the old yoghurt takes over. In order to keep the safety of our
+          societies, we feel that we must throw out the disgusting animal. The
+          concept of civilization itself suggests leaving behind animal
+          wilderness and advancing into a more developed and cultured way of
+          living, by building technologies such as tools, walls, laws, etc. By
+          progressively making our existence easier and more comfortable, we’ve
+          continued to create distance between our human experiences and nature
+          in its wild, untouched state.
+        </p>
+        <p>
+          In <span class="body_italics">The Cyborg Manifesto</span>, Donna
+          Harraway defines a cyborg as a hybrid of
+          <span class="body_italics">imagination and material reality”</span>,
+          created
+          <span class="body_italics"
+            >“where the boundary between human and animal is
+            transgressed.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          Here, she points to technology as the outcome of the human imagination
+          when posed with a lived reality which it sees as improvable:
+          engineerable, de-animalizable, un-wildened. Harraway carries on to
+          explain how this mechanism has made us reconstruct our world as
+          <span class="body_italics"
+            >“a problem of coding, a search for a common language in which all
+            resistance to instrumental control disappears and all heterogeneity
+            can be submitted to disassembly, reassembly, investment, and
+            exchange.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          In other words, we melt a rough wild world and pour it into molds we
+          construct; we attempt to build perfectly smooth construction blocks
+          that fit better together according to our convenience.
+        </p>
+        <p>
+          Through this understanding of ourselves and of the world as
+          optimizable, we engineer ways of calculating each individual, process,
+          and resource. Having this data lets us create control strategies which
+          (theoretically) remove the dangers of unpredictability and animalism.
+          For example, we’ve invented ophthalmology to fix eyesight to a
+          standard, we’ve invented a pill that helps control the frequency of
+          pregnancies, and we’re cloning meat in labs to create alternative food
+          sources. By translating the world into numbers we’re able to track, we
+          invent systems to figure out how to organize ourselves and make
+          machines that maximize productivity. And in theory this is great
+          because again, by removing wilderness from our societies and allowing
+          us to plan for how to get the most out of our resources, we promote
+          our own survival, comfort, and prosperity.
+        </p>
+        <p>
+          Through these logics that equate systems with righteousness, we create
+          power dynamics that favour productivity and the machinic spirit that
+          supports it. We create the idea that our civilization should function
+          like a well-oiled machine, a complicated mechanism made up of very
+          specific parts, and that would come to a halt if some of these parts
+          were “misshapen”. This dynamic echoes the rhetoric of the werewolf. By
+          requiring smoothness of its participants, the system punishes any
+          roughness in individuals that challenge machinic functioning:
+          unpredictability, wilderness, the wolf.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="partIII">
+        <h2>The Machine as the Intended User</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>
+          <span class="body_italics">Heyyyy,</span> so, we’re 2531 words in and
+          I’m about to tell you about some weird AI stuff I’ve seen, but first
+          let me actually introduce myself. My name is Joana, and with this text
+          I’m hoping to finish my degree in Graphic Design. As a young woman
+          planning on making a living as a creative/developer during a global
+          recession, I can’t say I’m not afraid of the future of AI, and
+          recognize my bias against it. But I want to clarify that by discussing
+          this technology in relation to the werewolf, my aim is not to demonize
+          it. I don’t blame anyone who (responsibly) uses this technology to
+          save time, money, or energy, and appreciate the innovation it has
+          brought to several fields, including the creative one. Although I
+          avoid using it for personal creative and environmental reasons, I also
+          try to keep an open mind to how it can continue to make itself part of
+          the world in helpful ways.
+        </p>
+        <p>
+          Now that we’re a little more cozy, let’s move on. In late November
+          2024, Telephone Communication Limited (TCL, the largest television
+          manufacturer worldwide) held a panel talk and screening of the first
+          AI-generated films at the Chinese Theater in Hollywood.
+          <span class="intext_footnote">✷</span>
+          These short films are available online, watch at your own risk. The
+          images below are stills from (in my opinion) the most
+          disturbing-looking one out of the total five released. It’s a
+          body-horror short film about a woman who due to an unexplained illness
+          turns into a giant slug:
+        </p>
+        <div class="background_image_section" id="slug"></div>
+        <p><span class="intext_footnote">✷</span></p>
+        <p>
+          As explained at the event by the general manager of TCL Research
+          America, Haohong Wang, the aim of the project is to
+          <span class="body_italics"
+            >“create a flywheel effect funded by two forces, advertising and
+            AI,”</span
+          >
+          creating a content-producing strategy that is both funded and informed
+          by targeted advertising.
+          <span class="intext_footnote">✷</span>
+          As was later explained by TCL’s vice president of content service and
+          partnerships, Catherine Zhang:
+          <span class="body_italics"
+            >“data told us that our users don’t want to work that hard, half of
+            them don’t even change the channel.”</span
+          >
+        </p>
+        <p>
+          In his article on the event, Jason Koebler from 404 Media goes on to
+          discuss the implications of AI on the creative and economical lives of
+          creators:
+          <span class="body_italics"
+            >“I can’t say for sure why any of the directors or individual people
+            working on these films decided to work on AI movies, whether they
+            are actually excited by the prospects here or whether they simply
+            needed work in an industry and town that is currently struggling
+            following a writers strike that was partially about having AI
+            foisted upon them.”</span
+          >
+          <span class="intext_footnote">✷</span>
+        </p>
+        <p>
+          However, I want to zoom into the utility of these short films.
+          Regardless of any potential artistic intention of the few humans
+          involved in their making, as Wang explained, more than anything they
+          were created to generate profit as quickly and effortlessly as
+          possible. Therefore, they are marketable digital content before they
+          are art.
+        </p>
+        <p>
+          In the last couple years there has been a very tangible shift of the
+          internet as a place for personal interconnectedness to a place for
+          generating profit, accelerated by the spreading accessibility of AI
+          tools. Another example is the shifting purpose of YouTube, a digital
+          platform started in 2005 for anyone to share personal videos,
+          encouraging many to experiment with the medium as a form of personal
+          expression.
+          <span class="intext_footnote">✷</span>
+          Later came the implementation of advertisements, leading to the
+          “YouTuber” and influencer profession as a potential way for anyone to
+          earn from the platform, possibly even to make a living. Now, in the
+          last couple years, a new side-hustle trend has been saturating the
+          platform with automated channels, run by using AI tools to script,
+          write, voice, and edit videos.
+          <span class="intext_footnote">✷</span>
+          As opposed to a “regular” side-job, this option offers the opportunity
+          to earn an extra income without spending as much time and energy.
+        </p>
+        <p>
+          But hey, what else are we supposed to do during a global recession,
+          when so many people aren’t able to make a livable wage? These two
+          examples are of course very different scenarios: one is a company that
+          made 24.3B$ in revenue in 2024 that’s trying to make even more money,
+          <span class="intext_footnote">✷</span>
+          the other is a mass of anonymous individuals trying to make more out
+          of what they have. Regardless, both are products and upholders of the
+          societal and economical dynamics we’ve created. Again, as explained in
+          the previous chapter, we idealize optimization and production to the
+          point that as individuals, in order to ensure our own survival, we're
+          pushed to melt and pour ourselves into molds that fit into these
+          machinic dynamics. Through this process, wild and animalistic human
+          processes like self-expressive creativity are sacrificed, in order to
+          make profitable products instead.
+        </p>
+        <p>
+          Enter cybernetics, a field of mathematics and science pioneered by
+          Norbert Wiener around the 1950’s, who defined it as
+          <span class="body_italics"
+            >“the science of control and communications in the animal and
+            machine.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          In essence, it studies how a total of interconnected pieces function
+          together to maintain the whole and create progress, equating the
+          functioning of an animal to that of a machine. Living beings are made
+          up of cells and tissues and organs that work together to keep them
+          alive. Machines are made up of sensors and decision-making mechanisms
+          and executers that work together to keep them functioning.
+          <span class="intext_footnote">✷</span>
+        </p>
+        <p>
+          Extending this logic further, cybernetics allows us to once again
+          arrive at the point that our societies function as large machines made
+          up of interconnected individuals, working together to maintain
+          themselves and create progress. Wiener argued that as members of
+          society, we are virtually equivalent to machines:
+          <span class="body_italics"
+            >“What is used as an element in a machine, is in fact an element in
+            the machine. Whether we entrust our decisions to machines of metal,
+            or to those machines of flesh and blood which are bureaus and vast
+            laboratories and armies and corporations, we shall never receive the
+            right answers to our questions unless we ask the right
+            questions.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          In other words, since mechanical functioning requires its parts to
+          work smoothly and predictably, being participants of a machinic
+          society means that we as people become machines to an extent.
+          Therefore, it doesn’t matter much anymore whether a decision is made
+          by an actual human participant or a mechanical component of this
+          machine. From this, Wiener argues that it’s much more relevant to
+          question the whole system under which such decisions are made.
+        </p>
+        <p>
+          Through this cybernetic envisioning of our societies, we see that in
+          reality we’ve shaped them to accommodate machines rather than actual
+          people. By scaring away the animal to protect the productivity of
+          smoothness, we’ve created systems that reward machinic behaviour.
+          We’ve come to value the characteristics of human nature which align
+          better with the functioning of machines, while suppressing those that
+          are more animalistic. As in the examples from this chapter, human
+          creativity is better rewarded when used to make something profitable
+          and productive, feeding the machine, than when it is used for
+          self-expression. Those that are able to adapt and evolve into
+          functioning more mechanically are able to survive, maintaining and
+          developing the machine further.
+        </p>
+        <p>
+          Machinic functioning is an extension of human nature, of our desire
+          for prosperity and inclination to building systems in the name of
+          survival. However, we will never be as productive and smooth as our
+          architectures ask of us. Because at the end of the day, we are just
+          living, breathing, flowing, evolving, unique, wild animals.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="partIV">
+        <h2>The Machine Under the Full Moon</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>
+          The original story of the werewolf, the myth of Lykaon’s curse,
+          doesn’t mention the moon as an ingredient of the werewolf’s
+          transformation. The connection between the werewolf and the moon
+          actually comes from medieval France.
+          <span class="intext_footnote">✷</span>
+          In populations near the dark forests of the Burgundy region, people
+          believed they could be cursed to become
+          <span class="body_italics">loup-garous</span>: ordinary people that
+          transform into blood-thirsty wolves under the light of the full moon.
+          Sharing the same narrative as the other branches of the tale, the
+          belief was that this curse was a punishment for not following the
+          teachings of the church.
+        </p>
+        <p>
+          The moon: a symbol of change, of cyclical transformation. In his
+          article into the interpretation of the myth of the werewolf, Eddie
+          Ejjbair points out how
+          <span class="body_italics"
+            >“the historical attribution of lycanthropy to man is interesting
+            considering the well-established link between femininity and the
+            lunar cycle.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          There’s the obvious connection between menstruation and the werewolf,
+          of experiencing a monthly bloody outburst of rage and wilderness. An
+          experience that seems destructive against the more predictable (and
+          machinic) daily energetic rhythm of the male hormonal cycle.
+        </p>
+        <p>
+          Beyond this connection, in her meta-analysis of werewolf tropes in
+          horror media, Gwen C Katz discusses how through the genre, several
+          artists have explored the conceptual connection between the werewolf
+          and other “violent” natural physical experiences, namely feminine
+          ones.
+          <span class="intext_footnote">✷</span>
+          For example, how Catherine Lundoff’s
+          <span class="body_italics">Silver Moon</span> explores the werewolf as
+          a metaphor for menopause, or how werewolf-hood in John Fawcett’s
+          <span class="body_italics">Ginger Snaps</span> represents feminine
+          puberty. In both stories the wolf is an analogy for an abrupt change
+          to the body, challenging because of how the character must “act
+          normal” in a new condition which doesn’t fit with societal
+          expectations. However, these transformations also present the
+          characters with a new sense of freedom and power. In
+          <span class="body_italics">Silver Moon</span>, Becca’s transformation
+          grants her the possibility of creating a new path after divorcing her
+          ex-husband, as well as exploring her same-sex attraction. In
+          <span class="body_italics">Ginger Snaps</span>, Ginger’s
+          transformation represents her growing into an adolescent, adapting to
+          a more powerful body and experiencing sexual desire.
+        </p>
+        <p><span class="intext_footnote">✷</span></p>
+
+        <div class="background_image_section" id="GingerSnaps"></div>
+        <div style="height: 50vh"></div>
+        <div class="background_image_section" id="Loba">
+          <div class="under_sectiontitle_space"></div>
+
+          <p class="quote">
+            “Finally I’ve found an infallible remedy<br />
+            Let it erase all the guilt<br />
+            I won’t stay by your side watching TV<br />
+            And listening to excuses<br /><br />
+            Life gave me a ravenous hunger<br />
+            And you only give me candy<br />
+            I’m going out there with my legs and my youth<br />
+            Even if the jealousy kills you<br /><br />
+            A she-wolf in the closet<br />
+            She wants to get out<br />
+            Let her eat the neighborhood<br />
+            Before going to sleep.”
+          </p>
+
+          <p>
+            <span class="intext_footnote">✷</span>
+            <span class="intext_footnote">✷</span>
+          </p>
+        </div>
+        <p>
+          Katz uses the term
+          <span class="body_italics">hopeful monster</span> to describe this
+          duality of monstrousness and freedom in the werewolf trope. She argues
+          that this duality gives the myth the ability to explore the abhorrent
+          with a certain open-mindedness, making the viewer question their fear
+          of animalistic instincts in the first place. However, the same term is
+          used in the field of evolutionary biology to refer to
+          <span class="body_italics"
+            >“organisms with a profound mutant phenotype that have the potential
+            to establish a new evolutionary lineage.”</span
+          >
+          <span class="intext_footnote">✷</span>
+          <span class="intext_footnote">✷</span>
+        </p>
+        <p>
+          Regardless of how they exist in very different contexts, both
+          definitions speak to the creative spirit of the werewolf, describing
+          its outcastedness as its strength, much like the terrifying unkillable
+          wolf of the Middle Ages. As explained in the first chapter, excluding
+          wilderness from society means the werewolf doesn’t have the safety of
+          being rooted in an ideology and history that represent them, like
+          their civilized counterparts. Removed from a cybernetic society built
+          of coding languages, excused of the cyborg vision of optimizing
+          material reality, this is all the werewolf has left: raw reality. By
+          representing our tie to nature, the only human characteristic we
+          simply can't melt down (as long as we’re still biologically living
+          beings), the wolf gains its immortality. Although unable to enjoy the
+          successes and disasters of a machine society, the spirit of the
+          werewolf prevails.
+        </p>
+        <p>
+          Despite of how sophisticated a machine might be, the full moon always
+          returns to disrupt its supposed smoothness. Regardless of the pressure
+          exerted by the machinic patterns we’ve created, the urge to shapeshift
+          will always be louder, as exemplified by the phenomenon of folk
+          programming. Spencer Chang defines it as
+          <span class="body_italics"
+            >“the kind of (re)programming we learn through our active use of the
+            Internet and software. As we use the Internet and learn how it
+            works, we’re constantly changing software to work for us (and in
+            doing so, make it feel more like us, too). If you’ve ever used an
+            app outside of its intended purpose, you are a folk
+            programmer.”</span
+          >
+          <span class="intext_footnote">✷</span>
+        </p>
+        <p>
+          I’ll leave you with one of my favourite examples of this concept. On
+          May 2nd in 2020, Marie Foulston organized a party on a Google Sheets
+          document.
+          <span class="intext_footnote">✷</span>
+          In the midst of the COVID-19 pandemic, she missed certain unspoken
+          rituals of social interaction, the subtle elements that go beyond the
+          exhaustingly literal translation of a conversation through video call.
+          In the format of Google Sheets, someone’s presence is only known
+          through their clicking on a cell, adding text or images or color.
+          Conversations flow beyond time, as it’d been impossible to tell if the
+          text written on any particular cell had been written 10 seconds or 10
+          minutes ago, by a close friend or someone you’d never met.
+          Nevertheless, guests would hang out in the Kitchen sheet, dance and
+          take mysterious gummies on the dance-floor, quietly sit together and
+          chat while enjoying a virtual sunrise.
+        </p>
+
+        <div class="background_image_section" id="party"></div>
+
+        <p><span class="intext_footnote">✷</span></p>
+        <p>
+          Our creativity in problem solving allows us to find countless
+          alternative ways to interact with any object or tool. Just as we might
+          think to use a chair to reach a high shelf, we might think of using an
+          online data processing program to host a virtual house party.
+          Similarly, regardless of the rigidness of the systems we might put in
+          place and adapt ourselves to, our werewolf nature dictates that
+          shapeshifting is inevitable, as we’ll always find room to transform.
+          The concept of folk programming re-centers the real human in digital
+          technologies, subverting the societal power of the machine.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="conclusion">
+        <h2>Conclusion</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>
+          Hi again, this is it, we did it, we’ve made it to the end. Together,
+          we’ve travelled a long and winding path through the entangled forest
+          that this text inhabits. So use this conclusion to rest and recollect
+          the main ideas we’ve covered.
+        </p>
+        <p>
+          I want one of your main takeaways to be that you are a very smart
+          animal. Our intelligence and desire to survive and prosper have driven
+          us to organize ourselves according to systems that prioritize safety
+          and productivity, requiring us to distance ourselves from the
+          unpredictability of animal nature. In other words, we’ve built
+          societies that encourage the machinic qualities of human nature, while
+          suppressing the animalistic ones. This is the ideology behind the
+          werewolf: a tale that’s supposed to teach us that it’s dangerous not
+          to suppress our wilderness.
+        </p>
+        <p>
+          In this process of de-animalizing ourselves, we’ve developed
+          civilizations that run on and maintain this expectation of tameness
+          and smoothness. Therefore, these machinic societies end up
+          accommodating other machines better than actual people. As digital
+          technologies develop in what seems like a never-ending race, their use
+          is no longer necessarily to add to human experiences, but to produce
+          more with less, to contribute further to the societal machine. The
+          intended user is no longer an actual person, but a fellow machine.
+        </p>
+        <p>
+          However, just as the werewolf transforms with the loyal and eternal
+          lunar cycle, our human nature always finds the space to shapeshift.
+          The myth of the werewolf teaches us that our animalness–our
+          rebelliousness, creativity, non-conformity–threatens the systems we’ve
+          built, but it also shows that this wilderness is inevitable,
+          regardless of any technological pressure to domesticate it.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div class="navegable_element" id="bibliography">
+        <h2>Bibliography</h2>
+        <div class="under_sectiontitle_space"></div>
+        <p>Cited Sources:</p>
+        <p>
+          Baille, Nathan. “Monstrous Lessons: Peter Stumpp, the Werewolf of
+          Bedburg.”
+          <span class="body_italics"
+            >University of Saskatchewan Undergraduate Research Journal</span
+          >, vol. 9, no. 2, 2024. Research Gate.
+          <a
+            target="_blank"
+            href="https://www.researchgate.net/publication/381591213_Monstrous_Lessons"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Binga, Tim. “New Case of Lycanthropy from an Accused Man-Beast.”
+          <span class="body_italics">Center for Inquiry</span>, 30 Apr. 2019.
+          <a
+            target="_blank"
+            href="https://www.centerforinquiry.org/blog/new-case-of-lycanthropy-from-an-accused-man-beast/"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Chang, Spencer. “We’re All (Folk) Programmers.”
+          <span class="body_italics">Reboot</span>, Reboot, 1 July 2024.
+          <a target="_blank" href="https://joinreboot.org/p/folk-programmers"
+            >⤷</a
+          >
+        </p>
+        <p>
+          “Cybernetics.” <span class="body_italics"
+            >Encyclopædia Britannica</span
+          >, Encyclopædia Britannica, inc., 25 Jan. 2025.
+          <a
+            target="_blank"
+            href="https://www.britannica.com/science/cybernetics"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Ejjbair, Eddie. “The Werewolf and Civilization’s Discontents.”
+          <span class="body_italics">Medium</span>, Medium, 29 Aug. 2022.
+          <a
+            target="_blank"
+            href="https://eejjbair.medium.com/spooky-szn-ii-the-werewolf-c4cc227d1256"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Foulston, Marie. “Party in a Shared Google Doc.”
+          <span class="body_italics">OneZero</span>, Medium. 13 May 2020.
+          <a
+            target="_blank"
+            href="https://onezero.medium.com/party-in-a-shared-google-doc-d576c565706e"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Freud, Sigmund. “Civilization and its Discontents”.
+          <span class="body_italics"
+            >The Standard Edition of the Complete Psychological Works of Sigmund
+            Freud</span
+          >, Volume XXI. Edited by James Strachey, 1930.
+        </p>
+        <p>
+          Harraway, Donna. “The Cyborg Manifesto”.
+          <span class="body_italics">Socialist Review</span>, 1985.
+        </p>
+        <p>
+          Katz, Gwen C. “The Many Metaphors of Lycanthropy.”
+          <span class="body_italics">Medium</span>, Medium, 22 May 2023.
+          <a
+            target="_blank"
+            href="https://medium.com/@gwenckatz/the-many-metaphors-of-lycanthropy-d051d0530c53"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Koebler, Jason. “I Went to the Premiere of the First Commercially
+          Streaming AI-Generated Movies.” <span class="body_italics"
+            >404 Media</span
+          >, 404 Media, 11 Dec. 2024.
+          <a
+            target="_blank"
+            href="https://www.404media.co/i-went-to-the-premiere-of-tcls-first-commercially-streaming-ai-movies/"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Land, Nick. “Spirit and Teeth”.
+          <span class="body_italics">Of Derrida, Heidegger, and Spirit.</span>
+          Edited by David Wood. NorthWestern University Press, 1993.
+        </p>
+        <p>
+          “Metamorphoses.” <span class="body_italics"
+            >Encyclopædia Britannica</span
+          >, Encyclopædia Britannica, inc., 6 Dec. 2024.
+          <a
+            target="_blank"
+            href="https://www.britannica.com/topic/Metamorphoses-poem-by-Ovid"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Otachi, Elsier. “YouTube Automation Examples: 12 Ideas to Try in 2025
+          | Fiverr.” <span class="body_italics">Fiverr Guides</span>, 1 Nov.
+          2024.
+          <a
+            target="_blank"
+            href="https://www.fiverr.com/resources/guides/video-animation/youtube-automation"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Ovid. <span class="body_italics">Metamorphoses</span>. Edited by R. J.
+          Tarrant. Oxford University Press, 2004. Oxford Classical Texts.
+        </p>
+        <p>
+          “Peter Stumpp: The Werewolf of Bedburg.”
+          <span class="body_italics">The Dark Histories Podcast</span>.
+          <a
+            target="_blank"
+            href="https://www.darkhistories.com/peter-stumpp-the-werewolf-of-bedburg/"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Sallés, Lluís. “La Alteridad y la Bestia.”
+          <span class="body_italics">Identidad Personal</span>, Semester 5 of
+          Bachelor's in Design and Innovation, Elisava. 8 Jan. 2024. Elisava,
+          Barcelona.
+        </p>
+        <p>
+          “Shakira - Loba (Official HD Video)”
+          <span class="body_italics">YouTube</span>, uploaded by Shakira, 14
+          Nov. 2009.
+          <a target="_blank" href="https://www.youtube.com/watch?v=C7ssrLSheg4"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Srivastava, Varsha. “Could A Curse Turn You into a Wolf?”
+          <span class="body_italics">Medium</span>, Medium, 5 Jan. 2025.
+          <a
+            target="_blank"
+            href="https://medium.com/@srivastavavarsha758/do-you-know-about-the-haunting-legend-of-the-werewolf-of-burgundy-under-the-full-moon-96832d5aee44"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Summers, Montague.
+          <span class="body_italics"
+            >The History Of Witchcraft And Demonology</span
+          >. Edited by C K Ogden, MA. Kegan Paul, Trench, Trubner & Co, 1926.
+        </p>
+        <p>
+          Summers, Montague.
+          <span class="body_italics">The Werewolf in Lore and Legend</span>.
+          Kegan Paul, Trench, Trubner & Co, 2003.
+        </p>
+        <p>
+          “TCL | Company Overview & News.”
+          <span class="body_italics">Forbes</span>, Forbes Magazine.
+          <a target="_blank" href="https://www.forbes.com/companies/tcl/">⤷</a>
+        </p>
+        <p>
+          Theissen, Günter. “The Proper Place of Hopeful Monsters in
+          Evolutionary Biology.” <span class="body_italics">PubMed</span>, 2006.
+          <a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/17046365/"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Wiener, Norbert.
+          <span class="body_italics"
+            >The Human Use of Human Beings: Cybernetics and Society</span
+          >. Da Capo Press, 1954.
+        </p>
+        <p>
+          “Youtube.” <span class="body_italics">Encyclopædia Britannica</span>,
+          Encyclopædia Britannica, inc., 3 Feb. 2025.
+          <a target="_blank" href="https://www.britannica.com/topic/YouTube"
+            >⤷</a
+          >
+        </p>
+        <div class="under_sectiontitle_space"></div>
+        <p>Influenced by:</p>
+        <p>
+          “BBC. All. Watched. over.by. Machines.of. Loving. Grace. 3OF 3.
+          Monkey.in.the. Machine. Pdtv.x 264. AAC. Mvgroup.Org : Adam Curtis :
+          Free Download, Borrow, and Streaming.”
+          <span class="body_italics">Internet Archive</span>, BBC, 1 Jan. 1970.
+          <a
+            target="_blank"
+            href="https://archive.org/details/BBC.All.Watched.Over.by.Machines.of.Loving.Grace.3of3.Monkey.in.the.Machine.PDTV"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Estés, Clarissa Pinkola.
+          <span class="body_italics"
+            >Women Who Run with the Wolves: Myths and Stories of the Wild Woman
+            Archetype</span
+          >. New York. Ballantine Books, 1992.
+        </p>
+        <p>
+          Konior, Bogna. “The Dark Forest Theory of Intelligence.”
+          <span class="body_italics">Machine Decision is Not Final</span>.
+          Urbanomic, 2023.
+        </p>
+        <p>
+          Preciado, Paul B. “Baroque Technopatriarchy: Reproduction.”
+          <span class="body_italics">Artforum</span>, Artforum. 1 Jan. 2018.
+          <a
+            target="_blank"
+            href="https://www.artforum.com/features/baroque-technopatriarchy-reproduction-237175/"
+            >⤷</a
+          >
+        </p>
+        <p>
+          Quicho, Alex. “Everyone is a Girl Online”.
+          <span class="body_italics">Science and Technology Essays & Ideas</span
+          >, WIRED. 11 Sept. 2023.
+          <a
+            target="_blank"
+            href="https://www.wired.com/story/girls-online-culture/"
+            >⤷</a
+          >
+        </p>
+        <div class="under_sectiontitle_space"></div>
+        <p>Image Sources:</p>
+        <p>
+          Foulston, Marie. “Kitchen and sunrise. Party in a Shared Google Doc.”
+          <span class="body_italics">Google Sheets</span>, 1 May 2020.
+          <a
+            target="_blank"
+            href="https://docs.google.com/spreadsheets/d/1RrqFW_-j8pvF_lehoQhcHGZgxGwfDvBWr0kwvrZNDLg/edit?gid=1604615107#gid=1604615107"
+            >⤷</a
+          >
+        </p>
+        <p>
+          <span class="body_italics">Ginger Snaps</span>. Directed by John
+          Fawcett, performances by Emily Perkins and Katharine Isabelle, Oddbod
+          Productions, 2000.
+        </p>
+        <p>
+          Mayer, Lukas. Execution of Peter Stubbe in 1589.
+          <span class="body_italics">Wikipedia</span>.
+          <a
+            target="_blank"
+            href="https://en.wikipedia.org/wiki/Peter_Stumpp#/media/File:Peter_Stump_crop.jpg"
+            >⤷</a
+          >
+        </p>
+        <p>
+          “Shakira - Loba (Official HD Video)”
+          <span class="body_italics">YouTube</span>, uploaded by Shakira, 14
+          Nov. 2009.
+          <a target="_blank" href="https://www.youtube.com/watch?v=C7ssrLSheg4"
+            >⤷</a
+          >
+        </p>
+        <p>
+          “THE SLUG | SHORT FILM | TCL STUDIOS”
+          <span class="body_italics">YouTube</span>, uploaded by TCLtvplus, 22
+          Nov. 2024.
+          <a target="_blank" href="https://www.youtube.com/watch?v=DZNmJwzpeac"
+            >⤷</a
+          >
+        </p>
+        <p>
+          <span class="body_italics">Werewolf of London</span>. Directed by
+          Stuart Walker, performance by Henry Hull, Universal Pictures, 1935.
+        </p>
+        <div class="section_end_space"></div>
+      </div>
+      <div id="credits">
+        <p>
+          Joana Soares de Albergaria Ambar Sobral
+          <a target="_blank" href="https://joanassobral.github.io/portfolio/"
+            >⤷</a
+          ><br />
+          Royal Academy of Art, The Hague<br />
+          BA Graphic Design, February 2025
+        </p>
+        <p>
+          Thesis guided by Prof. Dr. Füsun Türetken<br />
+          Special thanks to Patrycja Fixl and Maja Bielawska
+        </p>
+        <div class="section_end_space"></div>
+      </div>
     </main>
   </body>
 </html>

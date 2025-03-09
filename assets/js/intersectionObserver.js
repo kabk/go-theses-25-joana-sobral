@@ -18,6 +18,10 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 
 
+addEventListener("load", () => {
+  document.getElementById("home").scrollIntoView({behavior:"smooth"})
+});
+
 const observerOptionsH2 = {
   root: null,
   rootMargin: "0px",

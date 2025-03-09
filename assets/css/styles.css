@@ -197,10 +197,13 @@ h3:hover,
   h2,
   nav,
   main {
-    width: 90vw;
+    width: 80vw;
+  }
+  .navLink {
+    color: var(--accent-color);
   }
   main {
-    margin-left: 5vw;
+    margin-left: 10vw;
   }
   h1 {
     font-size: 27vw;
@@ -211,10 +214,10 @@ h3:hover,
     transform: none;
   }
   h2 {
-    font-size: 3.5em;
+    font-size: 3em;
   }
   p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 2em;
   }
 
@@ -241,6 +244,13 @@ h3:hover,
   h3:hover,
   #table_of_contents p:hover {
     -webkit-text-stroke: 0;
+  }
+
+  #table_of_contents p {
+    margin-bottom: 1em;
+  }
+  .toc_chapters {
+    margin-bottom: 1px;
   }
 
   #bibliography p {

@@ -79,96 +79,48 @@ const observerOptionsProgression = {
   threshold: 0,
 }
 
+let shiftFactor = 30;
+
 const progressionObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
-    let targetID = entry.target.id;
+    let targetID = entry.target.id
 
     if(entry.isIntersecting){
 
-        if(targetID == "abstract" || targetID == "introduction"){
-          if(!isMobile){
-            main.style.marginLeft = 2 + "vw"
-          }
-          setTimeout(()=>{
-            h2.forEach(h2=>{
-              h2.style.textAlign = "center"
-            })
-            p.forEach(p=>{
-              p.style.textAlign = "left"
-            })
-          },500)
-
-        } else if(targetID == "partI"){
-          if(!isMobile){
-            main.style.marginLeft = 10 + "vw"
-          }
-          setTimeout(()=>{
-            h2.forEach(h2=>{
-              h2.style.textAlign = "left"
-            })
-            p.forEach(p=>{
-              p.style.textAlign = "left"
-            })
-          },500)
-          
-        } else if(targetID == "partII"){
-          if(!isMobile){
-            main.style.marginLeft = 20 + "vw"
-          }
-          setTimeout(()=>{
-            p.forEach(p=>{
-            })
-          },500)
-
-        } else if(targetID == "partIII"){
-          if(!isMobile){
-            main.style.marginLeft = 30 + "vw"
-          }
-          setTimeout(()=>{
-            p.forEach(p=>{
-              p.style.textAlign = "left"
-            })
-          },500)
-
-        } else if(targetID == "partIV"){
-          if(!isMobile){
-            main.style.marginLeft = 40 + "vw"
-          }
-          setTimeout(()=>{
-            h2.forEach(h2=>{
-              h2.style.textAlign = "center"
-            })
-            p.forEach(p=>{
-              p.style.textAlign = "center"
-            })
-          },500)
-
-        } else if(targetID == "conclusion" || targetID == "bibliography"){
-          if(!isMobile){
-            main.style.marginLeft = 53 + "vw"
-          }
-          setTimeout(()=>{
-            h2.forEach(h2=>{
-              h2.style.textAlign = "center"
-            })
-            p.forEach(p=>{
-              p.style.textAlign = "left"
-            })
-          },500)
-
+      if(!isMobile){
+        if(targetID == "abstract") {
+          shiftFactor = 10
+        } else if(targetID == "introduction") {
+          shiftFactor = 25
+        } else if(targetID == "partI") {
+          shiftFactor = 50
+        } else if(targetID == "partII") {
+          shiftFactor = 100
+        } else if(targetID == "partIII") {
+          shiftFactor = 200
+        } else if(targetID == "partIV") {
+          shiftFactor = 400
         } else {
-          if(!isMobile){
-            main.style.marginLeft = 27 + "vw"
-          }
-          setTimeout(()=>{
-            h2.forEach(h2=>{
-            })
-            p.forEach(p=>{
-              p.style.textAlign = "left"
-            })
-          },500)
+          shiftFactor = 0
         }
-      
+      } else {
+        if(targetID == "abstract") {
+          shiftFactor = 2
+        } else if(targetID == "introduction") {
+          shiftFactor = 4
+        } else if(targetID == "partI") {
+          shiftFactor = 8
+        } else if(targetID == "partII") {
+          shiftFactor = 16
+        } else if(targetID == "partIII") {
+          shiftFactor = 32
+        } else if(targetID == "partIV") {
+          shiftFactor = 40
+        } else {
+          shiftFactor = 0
+        }
+      }
+
       if(scrollingDown){
         let activeNavLink = unseen_sections.children[0];
         activeNavLink.remove();
@@ -190,6 +142,28 @@ navegableElements.forEach(navegableElement=>{
 let firstNavLink = unseen_sections.children[0];
   firstNavLink.remove();
   seen_sections.appendChild(firstNavLink)
+
+
+
+function getRandomArbitrary() {
+  return Math.random() * (shiftFactor - (-shiftFactor)) -shiftFactor;
+}
+
+const pObserver = new IntersectionObserver((p)=>{
+  p.forEach(singleP=>{
+    if(singleP.isIntersecting){
+      let randomShiftLeft = getRandomArbitrary();
+      let randomShiftRight = getRandomArbitrary();
+      singleP.target.style.marginLeft = randomShiftLeft + "px"
+      singleP.target.style.marginRight = randomShiftRight + "px"
+      console.log(randomShift)
+    }
+  })
+}, observerOptionsProgression)
+
+p.forEach(p=>{
+  pObserver.observe(p);
+})
 
 
 

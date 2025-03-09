@@ -202,13 +202,13 @@ const backgroundImageObserver = new IntersectionObserver((entries)=>{
     if(entry.isIntersecting){
       backgroundVideo.style.opacity = 1;
       if(fileName == "party" || fileName == "Stumpp"){
-        backgroundVideo.src = "/../assets/images/" + fileName + ".mp4";
+        backgroundVideo.src = "go-theses-25-joana-sobral/assets/images/" + fileName + ".mp4";
         backgroundVideo.style.minWidth = "";
         backgroundVideo.style.minHeight = "";
         backgroundVideo.style.height = 80 + "vh";
         backgroundVideo.style.objectFit = "contain";
       } else {
-        backgroundVideo.src = "/../assets/images/" + fileName + ".mp4";
+        backgroundVideo.src = "go-theses-25-joana-sobral/assets/images/" + fileName + ".mp4";
         backgroundVideo.style.minWidth = "100%";
         backgroundVideo.style.minHeight = "100%";
         backgroundVideo.style.height = "";

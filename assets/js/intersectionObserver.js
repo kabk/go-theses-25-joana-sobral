@@ -97,9 +97,9 @@ const progressionObserver = new IntersectionObserver((entries)=>{
         } else if(targetID == "partII") {
           shiftFactor = 100
         } else if(targetID == "partIII") {
-          shiftFactor = 200
+          shiftFactor = 150
         } else if(targetID == "partIV") {
-          shiftFactor = 400
+          shiftFactor = 200
         } else {
           shiftFactor = 0
         }
@@ -156,7 +156,6 @@ const pObserver = new IntersectionObserver((p)=>{
       let randomShiftRight = getRandomArbitrary();
       singleP.target.style.marginLeft = randomShiftLeft + "px"
       singleP.target.style.marginRight = randomShiftRight + "px"
-      console.log(randomShift)
     }
   })
 }, observerOptionsProgression)

@@ -19,7 +19,7 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 
 addEventListener("load", () => {
-  document.getElementById("home").scrollIntoView({behavior:"smooth"})
+  document.getElementById("home").scrollIntoView({ behavior: "smooth" })
 });
 
 const observerOptionsH2 = {
@@ -27,16 +27,16 @@ const observerOptionsH2 = {
   rootMargin: "0px",
   threshold: 0.2,
 }
-const observerH2 = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
+const observerH2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     } else {
       entry.target.classList.remove("visible")
     }
   })
 }, observerOptionsH2);
-h2.forEach(h2=>{
+h2.forEach(h2 => {
   observerH2.observe(h2);
 })
 
@@ -44,32 +44,32 @@ h2.forEach(h2=>{
 var lastScrollTop = 0;
 var scrollingDown;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
   var currentScrollTop = window.scrollY;
-  if(currentScrollTop>lastScrollTop){
+  if (currentScrollTop > lastScrollTop) {
     scrollingDown = true;
   }
-  if(currentScrollTop<lastScrollTop){
+  if (currentScrollTop < lastScrollTop) {
     scrollingDown = false;
   }
   lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 })
 
-function assignTargetElements(){
-  for(i=0;i<navLinks.length;i++){
+function assignTargetElements() {
+  for (i = 0; i < navLinks.length; i++) {
     let targetElement = navegableElements[i];
 
-    navLinks[i].addEventListener("click",()=>{
-      targetElement.scrollIntoView({behavior:"smooth"})
+    navLinks[i].addEventListener("click", () => {
+      targetElement.scrollIntoView({ behavior: "smooth" })
     })
   }
 }
 assignTargetElements()
 
-for(i=0;i<tocLinks.length;i++){
+for (i = 0; i < tocLinks.length; i++) {
   let targetElement = navegableElements[i];
-  tocLinks[i].addEventListener("click",()=>{
-    targetElement.scrollIntoView({behavior:"smooth"})
+  tocLinks[i].addEventListener("click", () => {
+    targetElement.scrollIntoView({ behavior: "smooth" })
   })
 }
 
@@ -81,77 +81,77 @@ const observerOptionsProgression = {
 
 let shiftFactor = 30;
 
-const progressionObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
+const progressionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     let targetID = entry.target.id
 
-    if(entry.isIntersecting){
+    if (entry.isIntersecting) {
 
-      if(!isMobile){
-        if(targetID == "abstract") {
+      if (!isMobile) {
+        if (targetID == "abstract") {
           shiftFactor = 10
-        } else if(targetID == "introduction") {
+        } else if (targetID == "introduction") {
           shiftFactor = 25
-        } else if(targetID == "partI") {
+        } else if (targetID == "partI") {
           shiftFactor = 50
-        } else if(targetID == "partII") {
+        } else if (targetID == "partII") {
           shiftFactor = 100
-        } else if(targetID == "partIII") {
+        } else if (targetID == "partIII") {
           shiftFactor = 150
-        } else if(targetID == "partIV") {
+        } else if (targetID == "partIV") {
           shiftFactor = 200
         } else {
           shiftFactor = 0
         }
       } else {
-        if(targetID == "abstract") {
+        if (targetID == "abstract") {
           shiftFactor = 2
-        } else if(targetID == "introduction") {
+        } else if (targetID == "introduction") {
           shiftFactor = 4
-        } else if(targetID == "partI") {
+        } else if (targetID == "partI") {
           shiftFactor = 8
-        } else if(targetID == "partII") {
+        } else if (targetID == "partII") {
           shiftFactor = 16
-        } else if(targetID == "partIII") {
+        } else if (targetID == "partIII") {
           shiftFactor = 32
-        } else if(targetID == "partIV") {
+        } else if (targetID == "partIV") {
           shiftFactor = 40
         } else {
           shiftFactor = 0
         }
       }
 
-      if(scrollingDown){
+      if (scrollingDown) {
         let activeNavLink = unseen_sections.children[0];
         activeNavLink.remove();
         seen_sections.appendChild(activeNavLink)
       } else {
-          let activeNavLink = seen_sections.children[0];
-          activeNavLink.remove();
-          unseen_sections.appendChild(activeNavLink)
+        let activeNavLink = seen_sections.children[0];
+        // activeNavLink.remove();
+        unseen_sections.appendChild(activeNavLink)
       }
       assignTargetElements()
     }
   })
 }, observerOptionsProgression);
 
-navegableElements.forEach(navegableElement=>{
+navegableElements.forEach(navegableElement => {
   progressionObserver.observe(navegableElement);
 })
 
 let firstNavLink = unseen_sections.children[0];
-  firstNavLink.remove();
-  seen_sections.appendChild(firstNavLink)
+firstNavLink.remove();
+seen_sections.appendChild(firstNavLink)
 
 
 
 function getRandomArbitrary() {
-  return Math.random() * (shiftFactor - (-shiftFactor)) -shiftFactor;
+  return Math.random() * (shiftFactor - (-shiftFactor)) - shiftFactor;
 }
 
-const pObserver = new IntersectionObserver((p)=>{
-  p.forEach(singleP=>{
-    if(singleP.isIntersecting){
+const pObserver = new IntersectionObserver((p) => {
+  p.forEach(singleP => {
+    if (singleP.isIntersecting) {
       let randomShiftLeft = getRandomArbitrary();
       let randomShiftRight = getRandomArbitrary();
       singleP.target.style.marginLeft = randomShiftLeft + "px"
@@ -160,7 +160,7 @@ const pObserver = new IntersectionObserver((p)=>{
   })
 }, observerOptionsProgression)
 
-p.forEach(p=>{
+p.forEach(p => {
   pObserver.observe(p);
 })
 
@@ -168,17 +168,17 @@ p.forEach(p=>{
 
 const observerOptionsImgs = {
   root: null,
-  rootMargin: "-50% 0px -50% 0px",
-  threshold: 0,
+  rootMargin: "0px 0px 0px 0px",
+  threshold: 0.5,
 }
 
-const backgroundImageObserver = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
+const backgroundImageObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     let fileName = entry.target.id
-
-    if(entry.isIntersecting){
+    if (entry.isIntersecting) {
+      console.log(entry)
       backgroundVideo.style.opacity = 1;
-      if(fileName == "party" || fileName == "Stumpp"){
+      if (fileName == "party" || fileName == "Stumpp") {
         backgroundVideo.src = "./assets/images/" + fileName + ".mp4";
         backgroundVideo.style.minWidth = "";
         backgroundVideo.style.minHeight = "";
@@ -193,12 +193,12 @@ const backgroundImageObserver = new IntersectionObserver((entries)=>{
       }
 
       if (isMobile) {
-        if(fileName == "party" || fileName == "Stumpp"){
-        backgroundVideo.style.width = 80 + "vh";
-        backgroundVideo.style.height = "auto";
-        backgroundVideo.style.top = "0";
-        backgroundVideo.style.left = "-25%";
-        backgroundVideo.style.transform = "rotate(90deg)";
+        if (fileName == "party" || fileName == "Stumpp") {
+          backgroundVideo.style.width = 80 + "vh";
+          backgroundVideo.style.height = "auto";
+          backgroundVideo.style.top = "0";
+          backgroundVideo.style.left = "-25%";
+          backgroundVideo.style.transform = "rotate(90deg)";
         } else {
           backgroundVideo.style.width = "";
           backgroundVideo.style.top = "50%";
@@ -208,14 +208,14 @@ const backgroundImageObserver = new IntersectionObserver((entries)=>{
       }
     } else {
       backgroundVideo.style.opacity = 0;
-      setTimeout(()=>{
-      backgroundVideo.src = "";
-      },500)
-      
+      setTimeout(() => {
+        backgroundVideo.src = "";
+      }, 500)
+
     }
   })
 }, observerOptionsImgs);
 
-backgroundImageSections.forEach(backgroundImageSection=>{
+backgroundImageSections.forEach(backgroundImageSection => {
   backgroundImageObserver.observe(backgroundImageSection);
 })

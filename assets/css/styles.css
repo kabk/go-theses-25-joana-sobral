@@ -202,7 +202,7 @@ h3:hover,
     color: var(--accent-color);
   }
   main {
-    margin-left: 10vw;
+    margin-left: 5vw;
   }
   h1 {
     font-size: 25vw;
@@ -216,7 +216,7 @@ h3:hover,
     font-size: 3em;
   }
   p {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: 2em;
   }
 

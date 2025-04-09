@@ -107,15 +107,15 @@ const progressionObserver = new IntersectionObserver((entries) => {
         if (targetID == "abstract") {
           shiftFactor = 2
         } else if (targetID == "introduction") {
-          shiftFactor = 4
+          shiftFactor = 5
         } else if (targetID == "partI") {
-          shiftFactor = 8
+          shiftFactor = 7
         } else if (targetID == "partII") {
-          shiftFactor = 16
+          shiftFactor = 10
         } else if (targetID == "partIII") {
-          shiftFactor = 32
+          shiftFactor = 20
         } else if (targetID == "partIV") {
-          shiftFactor = 40
+          shiftFactor = 30
         } else {
           shiftFactor = 0
         }
@@ -127,7 +127,7 @@ const progressionObserver = new IntersectionObserver((entries) => {
         seen_sections.appendChild(activeNavLink)
       } else {
         let activeNavLink = seen_sections.children[0];
-        // activeNavLink.remove();
+        activeNavLink.remove();
         unseen_sections.appendChild(activeNavLink)
       }
       assignTargetElements()

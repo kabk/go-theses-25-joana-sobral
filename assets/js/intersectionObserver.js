@@ -176,7 +176,6 @@ const backgroundImageObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     let fileName = entry.target.id
     if (entry.isIntersecting) {
-      console.log(entry)
       backgroundVideo.style.opacity = 1;
       if (fileName == "party" || fileName == "Stumpp") {
         backgroundVideo.src = "./assets/images/" + fileName + ".mp4";

@@ -15,6 +15,7 @@
 ::selection {
   background-color: var(--accent-color);
   color: black;
+  -webkit-text-stroke: black;
 }
 
 html {
@@ -73,7 +74,7 @@ h3,
 }
 
 h1 {
-  font-size: 4.5em;
+  font-size: 10em;
   width: 90vw;
   text-align: center;
   margin: 0;
@@ -118,8 +119,7 @@ a:visited {
   color: var(--accent-color);
 }
 
-#background_video_container,
-#home_video_container {
+#background_video_container{
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -127,11 +127,6 @@ a:visited {
   left: 0;
   z-index: -10;
   overflow: hidden;
-}
-#home_video_container {
-  z-index: 1;
-  mix-blend-mode: multiply;
-  position: absolute;
 }
 .background_image_section {
   min-height: 100vh;
@@ -202,7 +197,7 @@ h3:hover,
     color: var(--accent-color);
   }
   main {
-    margin-left: 5vw;
+    margin-left: 10vw;
   }
   h1 {
     font-size: 25vw;
